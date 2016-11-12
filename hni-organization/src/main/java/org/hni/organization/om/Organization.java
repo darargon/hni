@@ -18,7 +18,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import org.hni.common.om.Persistable;
-import org.hni.user.om.Address;
+import org.hni.models.om.Address;
 
 /**
  * An organization is an entity that provides customer support

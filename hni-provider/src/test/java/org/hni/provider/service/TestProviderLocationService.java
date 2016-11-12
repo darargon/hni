@@ -8,9 +8,9 @@ import java.util.Date;
 
 import javax.inject.Inject;
 
+import org.hni.models.om.Address;
 import org.hni.provider.om.Provider;
 import org.hni.provider.om.ProviderLocation;
-import org.hni.user.om.Address;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

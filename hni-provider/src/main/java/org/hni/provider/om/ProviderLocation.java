@@ -20,7 +20,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hni.common.om.Persistable;
-import org.hni.user.om.Address;
+import org.hni.models.om.Address;
 
 /**
  * Represents a physical location for a provider generally where

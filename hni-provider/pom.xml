@@ -19,6 +19,11 @@
 			<groupId>org.hni</groupId>
 			<artifactId>hni-user</artifactId>
 			<version>${project.version}</version>
-		</dependency>  
+		</dependency>
+    <dependency>
+      <groupId>org.hni</groupId>
+      <artifactId>hni-models</artifactId>
+      <version>${project.version}</version>
+    </dependency>
   </dependencies>
 </project>

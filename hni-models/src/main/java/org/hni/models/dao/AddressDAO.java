@@ -1,7 +1,7 @@
-package org.hni.user.dao;
+package org.hni.models.dao;
 
 import org.hni.common.dao.BaseDAO;
-import org.hni.user.om.Address;
+import org.hni.models.om.Address;
 
 public interface AddressDAO extends BaseDAO<Address> {
 

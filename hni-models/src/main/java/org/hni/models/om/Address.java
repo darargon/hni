@@ -1,4 +1,4 @@
-package org.hni.user.om;
+package org.hni.models.om;
 
 import java.io.Serializable;
 

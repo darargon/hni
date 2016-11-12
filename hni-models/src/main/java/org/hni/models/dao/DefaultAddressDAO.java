@@ -1,7 +1,9 @@
-package org.hni.user.dao;
+package org.hni.models.dao;
+
 
 import org.hni.common.dao.AbstractDAO;
-import org.hni.user.om.Address;
+import org.hni.models.om.Address;
+
 import org.springframework.stereotype.Component;
 
 @Component

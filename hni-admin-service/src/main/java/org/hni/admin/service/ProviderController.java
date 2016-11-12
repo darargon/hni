@@ -1,7 +1,6 @@
 package org.hni.admin.service;
 
 import java.util.Collection;
-import java.util.Collections;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -13,12 +12,12 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.hni.models.dao.AddressDAO;
+import org.hni.models.om.Address;
 import org.hni.provider.om.Provider;
 import org.hni.provider.om.ProviderLocation;
 import org.hni.provider.service.ProviderLocationService;
 import org.hni.provider.service.ProviderService;
-import org.hni.user.dao.AddressDAO;
-import org.hni.user.om.Address;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

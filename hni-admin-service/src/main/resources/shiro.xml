@@ -26,7 +26,7 @@
                 <property name="filters">
                         <list>
                                 <!-- Provides our security layer and enforces logins for pages mapped to this context (/sm) -->
-                                <ref bean="shiroFilter"/>
+                                <!--<ref bean="shiroFilter"/>-->
                                 <!-- Adds user information to the log4j context. Must run AFTER the Shiro filter -->
                                 <!-- ref bean="mdcFilter"/>  -->
                                 <!-- Provides timing for pages mapped to this context (/sm) -->

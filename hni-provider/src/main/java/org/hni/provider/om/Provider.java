@@ -3,7 +3,6 @@ package org.hni.provider.om;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -19,7 +18,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import org.hni.common.om.Persistable;
-import org.hni.user.om.Address;
+import org.hni.models.om.Address;
 
 /**
  * A Provider is an entity that provides meals to clients.  There will be
@@ -44,7 +43,7 @@ public class Provider implements Serializable, Persistable {
 
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinTable(name = "provider_addresses", joinColumns = { @JoinColumn(name = "provider_id", referencedColumnName = "id") }, inverseJoinColumns = { @JoinColumn(name = "address_id", referencedColumnName = "id") })
-	private Set<Address> addresses = new HashSet<Address>();
+	private Set<Address> addresses = new HashSet<>();
 
 	public Provider() {}
 	public Provider(Long id) {

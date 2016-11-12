@@ -52,6 +52,7 @@
     <module>hni-admin-service</module>
     <module>hni-provider</module>
     <module>hni-order</module>
+	<module>hni-models</module>
   </modules>
 	<build>
 		<plugins>
