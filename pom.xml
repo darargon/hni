@@ -53,6 +53,7 @@
     <module>hni-provider</module>
     <module>hni-order</module>
 	<module>hni-models</module>
+	<module>hni-repository</module>
   </modules>
 	<build>
 		<plugins>

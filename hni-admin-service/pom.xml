@@ -60,6 +60,11 @@
 			<artifactId>hni-security</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hni</groupId>
+			<artifactId>hni-repository</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>

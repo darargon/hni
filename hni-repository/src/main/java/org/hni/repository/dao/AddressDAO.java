@@ -1,4 +1,4 @@
-package org.hni.models.dao;
+package org.hni.repository.dao;
 
 import org.hni.common.dao.BaseDAO;
 import org.hni.models.om.Address;
