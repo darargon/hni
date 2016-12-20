@@ -76,6 +76,13 @@ public interface OrderService extends BaseService<Order> {
 	 * @return
 	 */
 	public boolean maxDailyOrdersReached(User user);
+
+	/**
+	 * Returns true if the user has a current open order
+	 * @param user
+	 * @return
+	 */
+	public boolean currentPendingOrder(User user);
 	
 	/**
 	 * Returns true if the user has one or more active authorization codes (not expired or used up)

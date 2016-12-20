@@ -197,6 +197,20 @@ public class DefaultOrderService extends AbstractService<Order> implements Order
 	}
 
 	/**
+	 * Determines if the user has an order that has not yet been fulfilled.
+	 * @param user
+	 * @return
+	 */
+	@Override
+	public boolean currentPendingOrder(User user) {
+		LocalDateTime startDate = LocalDateTime.now().withHour(0).withMinute(0).withSecond(0); //.minus(Duration.ofHours(mealOffset));
+		LocalDateTime endDate = LocalDateTime.now().withHour(23).withMinute(59).withSecond(59);  // set duration to be all all day
+		Collection<Order> todaysOrders = orderDao.get(user, startDate, endDate);
+
+		return todaysOrders.stream().anyMatch(order -> order.getOrderStatus() == OrderStatus.OPEN);
+	}
+
+	/**
 	 * Returns true if the user has one or more valid and active activation codes.
 	 * @param user
 	 * @return

@@ -75,6 +75,7 @@ public class DefaultOrderProcessor implements OrderProcessor {
     public static String REPLY_INVALID_INPUT = "Invalid input! ";
     public static String REPLY_EXCEPTION_REGISTER_FIRST = "You will need to reply with REGISTER to sign up first.";
     public static String REPLY_MAX_ORDERS_REACHED = "You've reached the maximum number of orders for today. Please come back tomorrow.";
+    public static String REPLY_CURRENT_PENDING_ORDER = "You currently have an open order. Please wait until that order has been completed to place another.";
     private static final RemoteInvocationOptions REDISSON_REMOTE_INVOCATION_OPTION =
             RemoteInvocationOptions.defaults().expectAckWithin(10, TimeUnit.SECONDS).noResult();
 
@@ -116,6 +117,8 @@ public class DefaultOrderProcessor implements OrderProcessor {
 
             if (orderService.maxDailyOrdersReached(user)) {
                 return REPLY_MAX_ORDERS_REACHED;
+            } else if (orderService.currentPendingOrder(user)) {
+                return REPLY_CURRENT_PENDING_ORDER;
             }
             order = new PartialOrder();
             order.setTransactionPhase(TransactionPhase.MEAL);
