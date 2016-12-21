@@ -14,6 +14,7 @@ insert into users values(10, 'Client', 'HasMoreOrders', 'F', '123-456-7830', '' 
 insert into users values(11, 'Privacy', 'Hogg', 'M', '123-456-7830', '' ,0, '', '', now(), '0');
 insert into users values(12, 'OrderedYesterday', 'OneAuthCode', 'M', '123-456-7830', '' ,0, '', '', now(), '0');
 insert into users values(13, 'OrderedRecently', 'OneAuthCode', 'M', '123-456-7830', '' ,0, '', '', now(), '0');
+insert into users values(14, 'OrderOpen', 'OneAuthCode', 'M', '123-456-7830', '' ,0, '', '', now(), '0');
 
 truncate table organizations;
 insert into organizations values(1, 'Not Impossible', 'phone', 'ni@email.net', 'website', 'logo', now(), 1);
@@ -58,6 +59,8 @@ insert into orders values(5, 10, 1, dateadd('HOUR', -8, now()), now(), null, 9.9
 insert into orders values(6, 11, 1, dateadd('HOUR', -8, now()), now(), null, 9.95, 1.20, 1, 2);
 insert into orders values(7, 12, 1, dateadd('DAY', -1, now()), now(), null, 9.95, 1.20, 1, 2);
 insert into orders values(8, 13, 1, formatdatetime(now(), 'yyyy-MM-dd 11:30:00'), now(), null, 9.95, 1.20, 1, 2);
+insert into orders values(9, 13, 1, formatdatetime(now(), 'yyyy-MM-dd 11:30:00'), now(), null, 9.95, 1.20, 1, 2);
+insert into orders values(10, 14, 1, formatdatetime(now(), 'yyyy-MM-dd 11:30:00'), now(), null, 9.95, 1.20, 1, 1);
 
 truncate table order_items;
 insert into order_items values(null, 1, 1, 1, 6.99);

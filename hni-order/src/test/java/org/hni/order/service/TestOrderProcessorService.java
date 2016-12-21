@@ -86,12 +86,21 @@ public class TestOrderProcessorService {
 
 	@Test
 	public void testStatusOnCompletedOrder() {
-		User user = new User();
+		User user = new User(11L);
 		logger.debug(" ##### testStatusOnCompletedOrder ##### ");
-		user.setId(11L);
 
 		String message = orderProcessor.processMessage(user, "STATUS");
 		logger.debug(message);
-	
+
+		Assert.assertEquals(String.format(DefaultOrderProcessor.REPLY_ORDER_READY, "10790 parkridge blvd", "reston", "va"), message);
+	}
+
+	@Test
+	public void testCreateOrderWithOneOpen() {
+		User user = new User(14L);
+
+		String message = orderProcessor.processMessage(user, "MEAL");
+
+		Assert.assertEquals(DefaultOrderProcessor.REPLY_CURRENT_PENDING_ORDER, message);
 	}
 }

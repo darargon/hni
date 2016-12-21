@@ -115,10 +115,10 @@ public class DefaultOrderProcessor implements OrderProcessor {
             return REPLY_NOT_CURRENTLY_ORDERING;
         } else if (order == null && !message.equalsIgnoreCase(MSG_STATUS)) {
 
-            if (orderService.maxDailyOrdersReached(user)) {
-                return REPLY_MAX_ORDERS_REACHED;
-            } else if (orderService.currentPendingOrder(user)) {
+            if (orderService.currentPendingOrder(user)) {
                 return REPLY_CURRENT_PENDING_ORDER;
+            } else if (orderService.maxDailyOrdersReached(user)) {
+                return REPLY_MAX_ORDERS_REACHED;
             }
             order = new PartialOrder();
             order.setTransactionPhase(TransactionPhase.MEAL);
